@@ -1,0 +1,375 @@
+/* ======================================================
+   SV Germania Herolz – Fester Footer am unteren Rand (2025)
+   ====================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/* ------------------------------------------------------
+   Grundlayout
+   ------------------------------------------------------ */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f5f7;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* ------------------------------------------------------
+   Navigation / Header
+   ------------------------------------------------------ */
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.navbar a {
+  color: white;
+  margin: 0 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #dbe7ff;
+}
+
+/* ------------------------------------------------------
+   Hauptinhalt (Main)
+   ------------------------------------------------------ */
+main {
+  width: 80%;
+  max-width: 1000px;
+  margin: 40px auto 120px auto; /* Abstand unten für Footer */
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ------------------------------------------------------
+   Tabellen (Termine)
+   ------------------------------------------------------ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #004aad;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e7f0ff;
+}
+
+/* ------------------------------------------------------
+   Footer (immer unten fixiert)
+   ------------------------------------------------------ */
+footer {
+  position: fixed;       /* fixiert am Bildschirmrand */
+  bottom: 0;             /* klebt am unteren Rand */
+  left: 0;
+  width: 100%;           /* über ganze Seite */
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 15px;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+  z-index: 10;           /* bleibt über dem Hintergrund */
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #dbe7ff;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------
+   Hintergrund-Wasserzeichen "SV Herolz"
+   ------------------------------------------------------ */
+body::before {
+  content: "SV Herolz";
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-family: 'Poppins', sans-serif;
+  font-size: 200px;
+  font-weight: 900;
+  color: rgba(0, 74, 173, 0.05);
+  letter-spacing: 15px;
+  z-index: -1;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------
+   Responsive Anpassung (Handy & Tablet)
+   ------------------------------------------------------ */
+@media (max-width: 768px) {
+  .navbar a {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+
+  main {
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 150px; /* mehr Platz für Footer */
+  }
+
+  body::before {
+    font-size: 120px;
+  }
+}
+
+/* ==============================================
+   FOOTER – Einheitlich auf allen Seiten
+   ============================================== */
+footer {
+  position: fixed;        /* bleibt unten im Fenster */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #004aad; /* Vereinsblau */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.footer-content p {
+  margin: 4px 0;
+}
+
+footer a {
+  color: #dbe7ff;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ======================================================
+   ANMELDUNGSFORMULAR – Moderner Vereinslook
+   ====================================================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 450px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #004aad; /* Vereinsfarbe oben */
+}
+
+form label {
+  font-weight: 600;
+  color: #004aad;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #004aad;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 74, 173, 0.4);
+}
+
+/* Button */
+button {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: #003580;
+  transform: scale(1.02);
+}
+
+/* Formular-Titel */
+main h1 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+/* ======================================================
+   KONTAKTSEITE – Moderner Look mit Formular
+   ====================================================== */
+.contact-info {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.contact-info a {
+  color: #004aad;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  max-width: 550px;
+  margin: 0 auto;
+  background: white;
+  padding: 35px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #004aad;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 25px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #004aad;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #004aad;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 74, 173, 0.4);
+}
+
+.contact-form button {
+  width: 100%;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.contact-form button:hover {
+  background-color: #003580;
+  transform: scale(1.02);
+}
+
+/* ==============================================
+   MANNSCHAFTEN – Übersicht mit Kästchen
+   ============================================== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.team-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #004aad;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.team-card h2 {
+  color: #004aad;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.team-card p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+main h1 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 30px;
+}
